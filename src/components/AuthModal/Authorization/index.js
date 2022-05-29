@@ -1,4 +1,6 @@
 import { Tabs } from 'antd';
+import Login from "./Login";
+import Register from './Register';
 import "./__authorization.scss";
 const { TabPane } = Tabs;
 
@@ -18,10 +20,10 @@ const Authorization = () => {
                 size={"large"} 
                 tabBarStyle={authTabStyle}>
                 <TabPane tab="Login" key="1" >
-                    Login
+                    <Login />
                 </TabPane>
                 <TabPane tab="Register" key="2">
-                    Register
+                    <Register />
                 </TabPane>
             </Tabs>
         </div>

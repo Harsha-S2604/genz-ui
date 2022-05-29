@@ -1,3 +1,16 @@
 .ant-tabs-tab {
-    margin-right: 100px;
+    margin-right: 80px;
+}
+
+.ant-tabs-tab-btn {
+    font-size: 22px;
+}
+
+.ant-tabs-tab-btn:hover {
+    color: #1C18DB;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #1C18DB;
+    text-shadow: 0 0 0.25px currentcolor;
 }
