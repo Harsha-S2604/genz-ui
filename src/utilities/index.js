@@ -1,12 +1,15 @@
 import Validation from "./validation";
 
-let validation = null;
+class Utilities {
 
-const Utilities = {
+    constructor() {
+        this.validation = new Validation();
+    }
 
-    init: () => {
-        validation = new Validation();        
+    validate = (type, value) => {
+        this.validation.validate(type, value);
     }
 }
+
 
 export default Utilities;

@@ -1,6 +1,6 @@
 import "./__login.scss";
 
-const Login = () => {
+const Login = ({ utilities }) => {
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -8,11 +8,8 @@ const Login = () => {
     }
 
     const validateInput = (event) => {
-
         const { name, value } = event;
-
-
-        
+        utilities.validate(name, value);
     }
 
 
@@ -27,7 +24,10 @@ const Login = () => {
                         <div className="input-group-prepend">
                             <span className="input-group-text"><i className="fa fa-envelope" aria-hidden="true"></i></span>
                         </div>
-                        <input className='form-control shadow-none' type='email' placeholder='Enter your email' />
+                        <input 
+                            className='form-control shadow-none' 
+                            type='email' placeholder='Enter your email' 
+                            onChange={validateInput}/>
                     </div>
                 </div>
 
@@ -36,7 +36,10 @@ const Login = () => {
                         <div className="input-group-prepend">
                             <span className="input-group-text"><i className="fa fa-lock" aria-hidden="true"></i></span>
                         </div>
-                        <input className='form-control shadow-none' type='password' placeholder='Enter your password' />
+                        <input 
+                            className='form-control shadow-none' 
+                            type='password' placeholder='Enter your password' 
+                            onChange={validateInput}/>
                     </div>
                 </div>
 

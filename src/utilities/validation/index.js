@@ -14,6 +14,7 @@ class Validation {
     }
 
     validate = (type, value) => {
+        console.log("validating...")
         switch(type) {
             case "email":
                 const validEmail = this.validateEmail(value);
@@ -31,7 +32,7 @@ class Validation {
             validationResult["isValid"] = false;
             validationResult["message"] = "field should not be empty" 
         } else if(value.length < 6) {
-            validationResult["isValid"] = false,
+            validationResult["isValid"] = false;
             validationResult["message"] = "minimum 6 characters is required"
         } else {
             const validPasswordRegEx = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
