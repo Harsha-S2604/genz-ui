@@ -5,10 +5,10 @@ import NavItems from './Navitems';
 
 const Navbar = () => {
 
-    const [showLoginModal, setShowLoginModal] = useState(false)
+    const [showAuthModal, setShowAuthModal] = useState(false)
 
     const navItems = [
-        {name: "Login", href: "#", type: "modal", modalVar: showLoginModal, modalFunc: setShowLoginModal}
+        {name: "Login", href: "#", type: "modal", modalVar: showAuthModal, modalFunc: setShowAuthModal}
     ]
 
     return (
@@ -16,8 +16,11 @@ const Navbar = () => {
             <Container>
                 <NavbarBootStrap.Toggle aria-controls="responsive-navbar-nav" />
                 <NavbarBootStrap.Collapse>
-                    <NavbarBootStrap.Brand href="#home">GenZ BlogZ</NavbarBootStrap.Brand>
-                    <NavItems navItems={navItems} />
+                    <NavbarBootStrap.Brand id="primary-color" href="#home">GenZ BlogZ</NavbarBootStrap.Brand>
+                    <NavItems 
+                        navItems={navItems} 
+                        showAuthModal={showAuthModal}
+                        setShowAuthModal={setShowAuthModal} />
                 </NavbarBootStrap.Collapse>
             </Container>
         </NavbarBootStrap>
