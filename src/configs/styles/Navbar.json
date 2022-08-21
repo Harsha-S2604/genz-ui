@@ -1,0 +1,17 @@
+{
+    "loginButton": {
+        "borderRadius": "60px",
+        "width": 130,
+        "textTransform": "none"
+    },
+
+    "signUpButton": {
+        "borderRadius": "60px",
+        "width": 130,
+        "textTransform": "none"
+    },
+
+    "brand": {
+        "flexGrow": 1
+    }
+}
